@@ -29,6 +29,8 @@ import tesla from "./company/tesla.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import SummaryShort from "./SummaryShortImg.png";
+import SocialMidia from "./MidiaSocialImg.png";
 
 export {
   logo,
@@ -48,6 +50,7 @@ export {
   mongodb,
   nodejs,
   reactjs,
+  SocialMidia,
   redux,
   tailwind,
   typescript,
@@ -55,6 +58,7 @@ export {
   meta,
   shopify,
   starbucks,
+  SummaryShort,
   tesla,
   carrent,
   jobit,
