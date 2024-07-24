@@ -17,16 +17,8 @@ const App = () => {
         <Feedbacks />
         <div className="relative z-0">
           <Contact />
-          <StarsCanvas />
         </div>
-        <div className='w-full h-[400px] bg-[blue]'>
-          <div className={'sm:hidden'}>
-            aaaaaaaaaaaaaaa <br />
-            aaaaaaaaaaaaaaa <br />
-            aaaaaaaaaaaaaaa <br />
-            aaaaaaaaaaaaaaa <br />
-          </div>
-        </div>
+        
       </div>
     </BrowserRouter>
   )

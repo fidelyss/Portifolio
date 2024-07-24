@@ -6,7 +6,7 @@ import { styles } from '../styles'
 import { experiences } from '../constants'
 import { SectionWrapper } from '../Hoc/index'
 import { textVariant } from '../utils/motion'
-const ExperienceCard = ({ key, experience }) => (
+const ExperienceCard = ({ experience }) => (
   <VerticalTimelineElement
     contentStyle={{ background: '#1d1836', color: '#fff' }}
     contentArrowStyle={{ borderRigh: '7px solid #232631' }}
