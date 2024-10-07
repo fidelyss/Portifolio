@@ -21,19 +21,19 @@ import tailwind from "./tech/tailwind.png";
 import typescript from "./tech/typescript.png";
 import threejs from "./tech/threejs.svg";
 
-import meta from "./company/meta.png";
-import shopify from "./company/shopify.png";
-import starbucks from "./company/starbucks.png";
-import tesla from "./company/tesla.png";
+import rocket from "./company/rocket.png";
 
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
 import SummaryShort from "./SummaryShortImg.png";
 import SocialMidia from "./MidiaSocialImg.png";
+import inorbit from "./Inorbit.PNG";
 
 export {
   logo,
+  inorbit,
+  rocket,
   backend,
   creator,
   mobile,
@@ -55,11 +55,7 @@ export {
   tailwind,
   typescript,
   threejs,
-  meta,
-  shopify,
-  starbucks,
   SummaryShort,
-  tesla,
   carrent,
   jobit,
   tripguide,

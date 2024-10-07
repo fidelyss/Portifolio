@@ -43,22 +43,18 @@ const About = () => {
         variants={textVariant(0.3)}
         className='mt-[47px]'
       >
-        <p className={styles.sectionSubText}>
-          Introdução
-        </p>
-        <h1 className={styles.sectionHeadText}>Overview</h1>
+        <h1 className={styles.sectionHeadText}>Visão Geral</h1>
       </motion.div>
       <motion.p
         variants={textVariant(0.3)}
-        className={'mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]'}
+        className={'mt-1 text-secondary text-[17px] text-center max-w-3xl leading-[30px]'}
       >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-        Distinctio veritatis voluptatibus, corrupti itaque nisi,
-        perspiciatis cupiditate fugit quisquam
-        reprehenderit deserunt molestiae error magnam
-        culpa ipsa? Eaque adipisci rem quas recusandae?
+
+        Atuo no front-end e no back-end de aplicações web. No front-end, utilizo HTML, CSS e JavaScript, com frameworks como React e Vue.js para criar interfaces interativas. No back-end, trabalho com Node.js e Python, implementando lógica de negócio e APIs, além de usar Express para facilitar o desenvolvimento.
+
+        Gerencio bancos de dados relacionais, como MySQL, e não-relacionais, como MongoDB. Tenho experiência com Docker, CI/CD para automação de deploys e uso Git para controle de versão. Minha experiência em serviços de hospedagem, como AWS e Heroku, me permite integrar a experiência do usuário com a lógica interna da aplicação, garantindo um desenvolvimento eficiente de ponta a ponta.
       </motion.p>
-      <div className={'mt-20 flex flex-wrap gap-[150px] '}>
+      <div className={'mt-1 flex items-center justify-center gap-[70px] h-[650px] overflow-hidden w-full'}>
         {
           services.map((element, index) => (
             <ServiceCard key={element.title} index={index} {...element} />

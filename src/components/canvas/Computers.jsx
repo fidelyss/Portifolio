@@ -6,7 +6,7 @@ import CanvasLoader from "../Loader";
 
 const Computers = ({ ismobile }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
-  
+
   return (
     <mesh>
       <hemisphereLight intensity={1.5} position={[0, 1, 0]} groundColor="black" />
@@ -14,7 +14,7 @@ const Computers = ({ ismobile }) => {
       <primitive
         object={computer.scene}
         scale={ismobile ? 0.5 : 0.74}
-        position={[0, -3.25, -1.5]}
+        position={!ismobile ? [0, -2.70, -1.5] : [0, -1.45, -0.70]}
         rotation={[0, 0, 0]}
       />
     </mesh>

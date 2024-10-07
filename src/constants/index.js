@@ -10,53 +10,53 @@ import {
   reactjs,
   redux,
   tailwind,
+  rocket,
   nodejs,
   mongodb,
   git,
   figma,
   docker,
-  meta,
-  starbucks,
-  tesla,
-  shopify,
   carrent,
   SummaryShort,
   SocialMidia,
   jobit,
+  inorbit,
   tripguide,
   threejs,
 } from "../assets";
 
+
+
 export const navLinks = [
   {
     id: "about",
-    title: "About",
+    title: "Sobre",
   },
   {
     id: "work",
-    title: "Work",
+    title: "Trabalhos",
   },
   {
     id: "contact",
-    title: "Contact",
+    title: "Contato",
   },
 ];
 
 const services = [
   {
-    title: "Web Developer",
+    title: "Desenvolvedor Front-end",
     icon: web,
   },
   {
-    title: "React Native Developer",
+    title: "Desenvolvedor React Native",
     icon: mobile,
   },
   {
-    title: "Backend Developer",
+    title: "Desenvolvedor Backend ",
     icon: backend,
   },
   {
-    title: "Content Creator",
+    title: "Criador de conteudo",
     icon: creator,
   },
 ];
@@ -118,102 +118,47 @@ const technologies = [
 
 const experiences = [
   {
-    title: "React.js Developer",
-    company_name: "Starbucks",
-    icon: starbucks,
+    title: "PostgreSQL, ReactJS, Typescript, Fastify, DrizzleORM",
+    company_name: "ROCKETSEAT",
+    icon: rocket,
     iconBg: "#383E56",
-    date: "March 2020 - April 2021",
+    date: "Setembro, 21 de 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Desenvolvimento e manutenção de aplicações web usando React.js e outras tecnologias relacionadas.",
+      "Implementação de design responsivo e garantia de compatibilidade entre navegadores.",
+      "In.Obirt é uma plataforma web que permite criar metas, definir a frequência de execução e acompanhar o progresso, exibindo quantas metas foram concluídas e a regularidade de cada uma.",
     ],
   },
   {
-    title: "React Native Developer",
-    company_name: "Tesla",
-    icon: tesla,
+    title: "Javascript, HTML, CSS",
+    company_name: "ROCKETSEAT",
+    icon: rocket,
     iconBg: "#E6DEDD",
-    date: "Jan 2021 - Feb 2022",
+    date: "Maio, 14 de 2024",
     points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
+      "Desenvolvimento e manutenção de aplicações web usando Javascrip, HTML e CSS entre outras tecnologias relacionadas.",
+      "Resume um Short no youtube usando as apis ytdl-core, fluent-ffmpeg e ffmpeg-static para baixar, transcrever e resumir o video.",
     ],
-  },
-  {
-    title: "Web Developer",
-    company_name: "Shopify",
-    icon: shopify,
-    iconBg: "#383E56",
-    date: "Jan 2022 - Jan 2023",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
-  {
-    title: "Full stack Developer",
-    company_name: "Meta",
-    icon: meta,
-    iconBg: "#E6DEDD",
-    date: "Jan 2023 - Present",
-    points: [
-      "Developing and maintaining web applications using React.js and other related technologies.",
-      "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-      "Implementing responsive design and ensuring cross-browser compatibility.",
-      "Participating in code reviews and providing constructive feedback to other developers.",
-    ],
-  },
+  }
 ];
 
-const testimonials = [
-  {
-    testimonial:
-      "I thought it was impossible to make a website as beautiful as our product, but Rick proved me wrong.",
-    name: "Sara Lee",
-    designation: "CFO",
-    company: "Acme Co",
-    image: "https://randomuser.me/api/portraits/women/4.jpg",
-  },
-  {
-    testimonial:
-      "I've never met a web developer who truly cares about their clients' success like Rick does.",
-    name: "Chris Brown",
-    designation: "COO",
-    company: "DEF Corp",
-    image: "https://randomuser.me/api/portraits/men/5.jpg",
-  },
-  {
-    testimonial:
-      "After Rick optimized our website, our traffic increased by 50%. We can't thank them enough!",
-    name: "Lisa Wang",
-    designation: "CTO",
-    company: "456 Enterprises",
-    image: "https://randomuser.me/api/portraits/women/6.jpg",
-  },
-];
 
 const projects = [
   {
-    name: "Car Rent",
+    name: "Short Summary",
     description:
-      "Web-based platform that allows users to search, book, and manage car rentals from various providers, providing a convenient and efficient solution for transportation needs.",
+      "Plataforma baseada na web que permite aos usuários transcrever um video curto para um texto que resume o que esta acontecendo no video.",
     tags: [
       {
-        name: "react",
+        name: "Javascript",
         color: "blue-text-gradient",
       },
       {
-        name: "mongodb",
+        name: "HTML",
         color: "green-text-gradient",
       },
       {
-        name: "tailwind",
+        name: "CSS",
         color: "pink-text-gradient",
       },
     ],
@@ -221,47 +166,51 @@ const projects = [
     source_code_link: "https://github.com/fidelyss/Resumidor-de-Shorts-do-Youtube",
   },
   {
-    name: "Job IT",
+    name: "Midia Social App",
     description:
-      "Web application that enables users to search for job openings, view estimated salary ranges for positions, and locate available jobs based on their current location.",
+      "Aplicação web baseada no instagram. Podendo carregar arquivos, mensagens, e autentificar usuários.",
     tags: [
       {
-        name: "react",
+        name: "REACT",
         color: "blue-text-gradient",
       },
       {
-        name: "restapi",
+        name: "MongoDB",
         color: "green-text-gradient",
       },
       {
-        name: "scss",
+        name: "EXPRESS",
         color: "pink-text-gradient",
+      },
+      {
+        name: "NODEJS",
+        color: "green-text-gradient",
       },
     ],
     image: SocialMidia,
     source_code_link: "https://github.com/fidelyss/Midia-Social-App",
   },
   {
-    name: "Trip Guide",
+    name: "In.Orbit",
     description:
-      "A comprehensive travel booking platform that allows users to book flights, hotels, and rental cars, and offers curated recommendations for popular destinations.",
+      "In.Obirt é uma plataforma web que permite criar metas, definir a frequência de execução e acompanhar o progresso, exibindo quantas metas foram concluídas e a regularidade de cada uma.",
     tags: [
       {
-        name: "nextjs",
+        name: "React",
         color: "blue-text-gradient",
       },
       {
-        name: "supabase",
+        name: "PostgreSQL",
         color: "green-text-gradient",
       },
       {
-        name: "css",
+        name: "Nodejs",
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
-    source_code_link: "https://github.com/",
+    image: inorbit,
+    source_code_link: "https://github.com/fidelyss/Control-of-daily-goals",
   },
 ];
 
-export { services, technologies, experiences, testimonials, projects };
+export { services, technologies, experiences, projects };

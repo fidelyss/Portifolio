@@ -9,7 +9,7 @@ const SectionWrapper = (Component, idName) => {
                 initial='hidden'
                 whileInView='show'
                 viewport={{ once: true, amount: 0.25 }}
-                className='flex flex-col items-center'
+                className='flex flex-col items-center overflow-x-hidden'
             >
                 <span className='hash-span' id={idName}>&nbsp;</span>
                 <Component />
