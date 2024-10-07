@@ -5,11 +5,11 @@ import { About, Contact, Experience, Hero, Navbar, Tech, Works, StarsCanvas } fr
 const App = () => {
   return (
     <BrowserRouter>
-      <div className="relative z-0 bg-primary w-full w-screen">
+      <div className="relative z-0 bg-primary w-full overflow-x-hidden">
         <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
           <Navbar />
           <Hero />
-        </div>
+        </div>  
         <About />
         <Experience />
         <Tech />
