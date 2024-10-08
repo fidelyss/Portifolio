@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 import { styles } from "../styles";
 import { github } from "../assets";
-import { SectionWrapper } from "../hoc";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
 
@@ -73,31 +72,33 @@ const ProjectCard = ({
 const Works = () => {
   return (
     <>
-      <motion.div variants={textVariant()}>
-        <h2 className={`${styles.sectionHeadText}`}>Projetos.</h2>
-      </motion.div>
+      <div className='w-full flex flex-col items-center'>
+        <motion.div variants={textVariant()}>
+          <h2 className={`${styles.sectionHeadText} text-center`}>Projetos.</h2>
+        </motion.div>
 
-      <div className='w-full flex justify-center'>
-        <motion.p
-          variants={fadeIn("", "", 0.1, 1)}
-          className='mt-3 text-secondary text-[17px] w-full text-center max-w-3xl leading-[30px]'
-        >
-          Os projetos a seguir demonstram minhas
-          habilidades e experiência com exemplos práticos.
-          Cada um é brevemente descrito, com links para o código
-          e demonstrações ao vivo, refletindo minha capacidade de
-          resolver problemas, trabalhar com diversas tecnologias e
-          gerenciar projetos de forma eficiente.
-        </motion.p>
-      </div>
+        <div className='w-full flex justify-center'>
+          <motion.p
+            variants={fadeIn("", "", 0.1, 1)}
+            className=' mt-3 text-secondary text-[17px] w-full text-center max-w-3xl leading-[30px]'
+          >
+            Os projetos a seguir demonstram minhas
+            habilidades e experiência com exemplos práticos.
+            Cada um é brevemente descrito, com links para o código
+            e demonstrações ao vivo, refletindo minha capacidade de
+            resolver problemas, trabalhar com diversas tecnologias e
+            gerenciar projetos de forma eficiente.
+          </motion.p>
+        </div>
 
-      <div className='mt-20 flex gap-7'>
-        {projects.map((project, index) => (
-          <ProjectCard key={`project-${index}`} index={index} {...project} />
-        ))}
+        <div className='mt-20 flex gap-7'>
+          {projects.map((project, index) => (
+            <ProjectCard key={`project-${index}`} index={index} {...project} />
+          ))}
+        </div>
       </div>
     </>
   );
 };
 
-export default SectionWrapper(Works, "");
+export default Works;
