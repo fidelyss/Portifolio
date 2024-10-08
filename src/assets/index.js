@@ -26,8 +26,8 @@ import rocket from "./company/rocket.png";
 import carrent from "./carrent.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
-import SummaryShort from "./SummaryShortImg.png";
-import SocialMidia from "./MidiaSocialImg.png";
+import SummaryShort from "./SummaryShortImg.PNG";
+import SocialMidia from "./MidiaSocialImg.PNG";
 import inorbit from "./Inorbit.PNG";
 
 export {
