@@ -1,11 +1,11 @@
-import logo from "./logo.svg";
-import backend from "./backend.png";
-import creator from "./creator.png";
-import mobile from "./mobile.png";
-import web from "./web.png";
-import github from "./github.png";
-import menu from "./menu.svg";
-import close from "./close.svg";
+import logo from "./others/logo.svg";
+import backend from "./others/backend.png";
+import creator from "./others/creator.png";
+import mobile from "./others/mobile.png";
+import web from "./others/web.png";
+import github from "./others/github.png";
+import menu from "./others/menu.svg";
+import close from "./others/close.svg";
 
 import css from "./tech/css.png";
 import docker from "./tech/docker.png";
@@ -23,12 +23,12 @@ import threejs from "./tech/threejs.svg";
 
 import rocket from "./company/rocket.png";
 
-import carrent from "./carrent.png";
-import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
-import SummaryShort from "./SummaryShortImg.PNG";
-import SocialMidia from "./MidiaSocialImg.PNG";
-import inorbit from "./Inorbit.PNG";
+import carrent from "./others/carrent.png";
+import jobit from "./others/jobit.png";
+import tripguide from "./others/tripguide.png";
+import SummaryShort from "./others/SummaryShortImg.PNG";
+import SocialMidia from "./others/MidiaSocialImg.PNG";
+import inorbit from "./others/Inorbit.PNG";
 
 export {
   logo,
