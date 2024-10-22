@@ -42,6 +42,7 @@ const Computers = ({ response }) => {
 const computerCanvas = () => {
   const [response, setResponse] = useState('');
   useEffect(() => {
+    setResponse('commonNotebook')
     const handleMediaQueryChange = () => {
       if (window.matchMedia('(min-width: 320px) and (max-width: 480px)').matches) {
         setResponse('smallMobile');
