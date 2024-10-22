@@ -6,6 +6,7 @@ import { styles } from "../styles";
 import { github } from "../assets";
 import { projects } from "../constants";
 import { fadeIn, textVariant } from "../utils/motion";
+import { SectionWrapper } from "../Hoc";
 
 const ProjectCard = ({
   index,
@@ -101,4 +102,5 @@ const Works = () => {
   );
 };
 
-export default Works;
+export default SectionWrapper(Works, 'works');
+

@@ -5,6 +5,7 @@ import emailjs from "@emailjs/browser";
 import { styles } from "../styles";
 import { EarthCanvas, StarsCanvas } from "./canvas";
 import { slideIn } from "../utils/motion";
+import { SectionWrapper } from "../Hoc";
 
 const Contact = () => {
   const formRef = useRef();
@@ -133,4 +134,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default SectionWrapper(Contact, 'contact');

@@ -2,19 +2,37 @@ import React, { Suspense, useEffect, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, Preload, useGLTF } from "@react-three/drei";
 
+
 import CanvasLoader from "../Loader";
 
-const Computers = ({ ismobile }) => {
+const Computers = ({ response }) => {
   const computer = useGLTF("./desktop_pc/scene.gltf");
-
+  console.log(response)
   return (
     <mesh>
       <hemisphereLight intensity={1.5} position={[0, 1, 0]} groundColor="black" />
       <pointLight intensity={1} />
       <primitive
         object={computer.scene}
-        scale={ismobile ? 0.5 : 0.74}
-        position={!ismobile ? [0, -2.70, -1.5] : [0, -1.45, -0.70]}
+        scale={
+          response == 'smallMobile' ? 0.3 :
+            response == 'middleMobile' ? 0.4 :
+              response == 'bigMobile' ? 0.5 :
+                response == 'tabletsInPortraitMode' ? 0.7 :
+                  response == 'landscapeTabletsAndSmallDesktops' ? 0.7 :
+                    response == 'commonNotebook' ? 0.74 : 0
+
+
+        }
+        position={
+          response == 'smallMobile' ? [0, 0.4, -0.70] :
+            response == 'middleMobile' ? [0, -0.15, -0.70] :
+              response == 'bigMobile' ? [0, -1, -0.70] :
+                response == 'tabletsInPortraitMode' ? [0, -3.1, -1.5] :
+                  response == 'landscapeTabletsAndSmallDesktops' ? [0, -2.70, -1.5] :
+                    response == 'commonNotebook' ? [0, -2.70, -1.5] : [0, 0, 0]
+
+        }
         rotation={[0, 0, 0]}
       />
     </mesh>
@@ -22,16 +40,28 @@ const Computers = ({ ismobile }) => {
 }
 
 const computerCanvas = () => {
-  const [ismobile, setIsmobile] = useState(false);
+  const [response, setResponse] = useState('');
   useEffect(() => {
-    const mediaQuery = window.matchMedia('(max-width: 640px)');
-    setIsmobile(mediaQuery.matches);
-    const handleMediaQueryChange = (event) => {
-      setIsmobile(event.matches);
+    const handleMediaQueryChange = () => {
+      if (window.matchMedia('(min-width: 320px) and (max-width: 480px)').matches) {
+        setResponse('smallMobile');
+      } else if (window.matchMedia('(min-width: 481px) and (max-width: 640px)').matches) {
+        setResponse('middleMobile');
+      } else if (window.matchMedia('(min-width: 641px) and (max-width: 768px)').matches) {
+        setResponse('bigMobile');
+      } else if (window.matchMedia('(min-width: 769px) and (max-width: 1024px)').matches) {
+        setResponse('tabletsInPortraitMode');
+      } else if (window.matchMedia('(min-width: 1025px) and (max-width: 1280px)').matches) {
+        setResponse('landscapeTabletsAndSmallDesktops');
+      } else if (window.matchMedia('(min-width: 1281px) and (max-width: 1440px)').matches) {
+        setResponse('commonNotebook');
+      } else if (window.matchMedia('(min-width: 1441px) and (max-width: 1920px)').matches) {
+        setResponse('largeDesktops');
+      }
     }
-    mediaQuery.addEventListener('change', handleMediaQueryChange);
+    window.addEventListener('resize', handleMediaQueryChange);
     return () => {
-      mediaQuery.removeEventListener('change', handleMediaQueryChange);
+      window.removeEventListener('resize', handleMediaQueryChange);
     }
 
   }, []);
@@ -40,7 +70,7 @@ const computerCanvas = () => {
     <Canvas
       frameloop="demand"
       shadows
-      camera={{ position: [20, 3, 5], fov: 25 }}
+      camera={{ position: response == 'tabletsInPortraitMode' ? [20, 15, 5] : [20, 3, 5], fov: 25 }}
       gl={{ preserveDrawingBuffer: true }}
     >
 
@@ -52,7 +82,7 @@ const computerCanvas = () => {
       <Preload all />
 
       <Suspense fallback={<CanvasLoader />}>
-        <Computers ismobile={ismobile} />
+        <Computers response={response} />
       </Suspense>
     </Canvas>
   )

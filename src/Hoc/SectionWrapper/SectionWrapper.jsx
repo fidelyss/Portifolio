@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import { styles } from '../styles'
-import { staggerContainer } from '../utils/motion'
+import { styles } from '../../styles'
+import { staggerContainer } from '../../utils/motion'
 const SectionWrapper = (Component, idName) => {
     return function HOC() {
         return (
@@ -9,7 +9,7 @@ const SectionWrapper = (Component, idName) => {
                 initial='hidden'
                 whileInView='show'
                 viewport={{ once: true, amount: 0.25 }}
-                className='flex flex-col items-center'
+                className='flex flex-col items-center' 
             >
                 <span className='hash-span' id={idName}>&nbsp;</span>
                 <Component />
